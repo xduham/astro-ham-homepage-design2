@@ -1,11 +1,42 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Nav from "../components/Home/Nav.astro";
+
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 ---
+
+
 <Layout title="「半部电台」业余无线电社 - 博客">
 <div class="px-24 pt-4">
     <Nav />
 
+    <div class="flex flex-col justify-between items-center mt-20 w-full">
+        <p class="font-bold text-4xl mb-10">
+            「半部电台」博客
+        </p>
+
+        <ul class="flex flex-col justify-center items-center w-full">
+            {allPosts.map((post: any) => <li class="posts">
+                <a class="text-2xl hover:underline underline-offset-2" href={post.url}>
+                    {post.frontmatter.title}
+                </a>
+                <p class="text-secondary-600 text-sm">
+                    {post.frontmatter.pubDate.slice(0, 10)}
+                </p>
+                <p class="font-normal text-sm text-gray-600 w-120 mt-4">
+                    {post.frontmatter.description}
+                </p>
+            </li>)}
+        </ul>
+    </div>
 
 </div>
 </Layout>
+
+<style>
+@reference "../styles/global.css";
+
+.posts  {
+    @apply px-10 py-5 bg-secondary-400 rounded-lg text-lg
+}
+</style>
