@@ -1,15 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Nav from "../components/Home/Nav.astro";
-
 const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 ---
 
 
 <Layout title="「半部电台」业余无线电社 - 博客">
-<div class="px-24 pt-4">
-    <Nav />
-
     <div class="flex flex-col justify-between items-center mt-20 w-full">
         <p class="font-bold text-4xl mb-10">
             「半部电台」博客
@@ -29,8 +24,6 @@ const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true })
             </li>)}
         </ul>
     </div>
-
-</div>
 </Layout>
 
 <style>
