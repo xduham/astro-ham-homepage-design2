@@ -1,5 +1,9 @@
 ---
 import TitleSubtitle from "./TitleSubtitle.astro";
+import bg from "../../assets/images/bg-1.png"
+import bg_2 from "../../assets/images/bg-3.png";
+import bg_3 from "../../assets/images/bg-4.png";
+
 const {title, subtitle} = {
     title: "社团核心特色",
     subtitle: "我们不仅是技术的探索者，更是红色通信精神的传承者。在这里，理论与实践深度结合，历史与未来在此共鸣。",
@@ -16,8 +20,8 @@ const {title, subtitle} = {
             </p>
         </div>
 
-        <div class="w-96 h-[521px] bg-white rounded-tl-2xl rounded-tr-2xl self-end mr-16">
-            <!--    图片 -->
+        <div class="w-96 h-[521px] bg-white rounded-tl-2xl rounded-tr-2xl self-end mr-16 overflow-hidden">
+            <img src={bg.src} alt="bg" class="w-full h-full object-cover rounded-tl-2xl rounded-tr-2xl"/>
         </div>
     </div>
 
@@ -29,8 +33,9 @@ const {title, subtitle} = {
                     从传统的短波（HF）通联到现代的软件无线电（SDR），从入门级的操作证书考取到最前沿的卫星通信、物联网（LoRa）组网，我们为社员提供了完整的成长路径。社团拥有丰富的实验设备和专业的技术指导，无论你是刚入门的小白还是技术大神，都能在这里找到属于你的探索方向，亲手触摸无线技术的脉搏。
                 </p>
             </div>
-            <div class="w-[488px] h-full mt-8 bg-white rounded-tl-2xl rounded-tr-2xl justify-center justify-self-center self-center">
+            <div class="w-[488px] h-full mt-8 bg-white rounded-tl-2xl rounded-tr-2xl justify-center justify-self-center self-center overflow-hidden">
                 <!--    图片 -->
+                <img src={bg_2.src} alt="bg" class="w-full h-full object-cover"/>
             </div>
         </div>
 
@@ -41,8 +46,8 @@ const {title, subtitle} = {
                     我们坚信，实践是检验真理的唯一标准。社团常年组织各类电子制作项目，从DIY天线到改装电台，再到嵌入式开发，鼓励成员将想法变为现实。同时，我们积极组织队伍参与全国大学生电子设计竞赛等顶级赛事，并屡获佳绩。在这里，你将与优秀的同伴并肩作战，在挑战中快速成长，收获宝贵的经验和荣誉。
                 </p>
             </div>
-            <div class="w-[488px] h-full mt-8 bg-white rounded-tl-2xl rounded-tr-2xl justify-center justify-self-center self-center">
-                <!--    图片 -->
+            <div class="w-[488px] h-full mt-8 bg-white rounded-tl-2xl rounded-tr-2xl justify-center justify-self-center self-center overflow-hidden">
+                <img src={bg_3.src} alt="bg" class="w-full h-full object-cover"/>
             </div>
         </div>
     </div>

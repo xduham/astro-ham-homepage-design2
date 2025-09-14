@@ -1,6 +1,6 @@
 ---
 import CapsuleButton from "../CapsuleButton.astro";
-
+import bg from "../../assets/images/clear_bg.png";
 ---
 <section class="section-hero">
     <!-- 左半区域 -->
@@ -51,7 +51,9 @@ import CapsuleButton from "../CapsuleButton.astro";
     </div>
 
     <div>
-        <div class="w-[560px] h-[780px] bg-gray-200 rounded-3xl"></div>
+        <div class="h-[650px] aspect-auto rounded-3xl">
+            <img class="w-full h-full object-cover rounded-3xl" src={bg.src} alt="背景图" />
+        </div>
     </div>
 </section>
 
