@@ -1,0 +1,54 @@
+---
+const {title, subtitle} = {
+    title: "FAQs",
+    subtitle: "我们为每位对无线电技术充满热情的同学提供了一个独特的平台。在这里，你不仅能收获前沿的专业知识，更能找到一群志同道合的伙伴，传承一份有故事的精神。"
+}
+
+const FAQs = [
+    {
+        question: "我完全没有无线电基础，是个纯“小白”，可以加入社团吗？",
+        answer: "当然可以！我们欢迎所有对无线电技术感兴趣的同学加入社团。无论你是初学者还是有一定经验的爱好者，我们都有适合你的活动和资源。"
+    },
+    {
+        question: "社团对成员的专业有限制吗？不是通信专业的学生能学会吗？",
+        answer: "没有任何专业限制！我们的成员来自通信工程、计算机、电子、机电、人文社科等各个学院。无线电技术是一门实践性很强的学科，很多知识都可以在社团的活动和项目中学习到。我们相信，不同的专业背景反而能碰撞出更多创新的火花。"
+    },
+    {
+        question: "社团内部是如何组织的？我可以选择做什么？",
+        answer: " 为了让每位成员都能发挥特长，社团主要分为几个方向：\n" +
+            "技术部： 负责硬件项目研发、技术攻关和竞赛培训。\n" +
+            "运维部： 负责日常的无线电通联、竞赛组织和设备维护。\n" +
+            "宣传部： 负责社团活动的宣传、历史资料整理和新媒体运营。 你可以根据自己的兴趣和擅长的领域，选择加入不同的方向，也可以跨方向参与活动，全面发展。"
+    },
+    {
+        question: "加入社团会占用很多时间吗？活动频率是怎样的？",
+        answer: "社团的活动安排非常灵活。我们通常每周会有一次技术分享或集体学习的例会。此外，我们会根据项目进度和通联比赛的日程安排集中的活动。我们鼓励大家在不影响学业的前提下参与社团活动，你可以根据自己的课余时间和兴趣深度，自由选择参加。无论是深度参与项目，还是偶尔参加通联，我们都同样欢迎。"
+    },
+]
+---
+<section class="flex mt-36 justify-between">
+    <div class="flex flex-col">
+        <p class="text-5xl font-semibold">{title}</p>
+        <p class="font-light w-[32rem] mt-2">
+            {subtitle}
+        </p>
+    </div>
+
+    <div class="flex flex-col">
+        <!--<div class="flex w-[1087px] h-16 bg-secondary-300 rounded-xl items-center">-->
+        <!--    <div class="ml-4 mr-2.5">-->
+        <!--        ICON-->
+        <!--    </div>-->
+        <!--    <p class="justify-start items-center text-base font-bold">我完全没有无线电基础，是个纯“小白”，可以加入社团吗？</p>-->
+        <!--</div>-->
+
+        <div class="flex flex-col space-y-6">
+            {FAQs.map((faq) => (
+                    <div class="flex flex-col w-[1000px] bg-secondary-300 rounded-xl p-6">
+                        <p class="justify-start items-center text-lg font-bold">{faq.question}</p>
+                        <p class="justify-start items-center text-base font-light mt-2">{faq.answer}</p>
+                    </div>
+            ))}
+        </div>
+    </div>
+</section>
