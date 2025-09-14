@@ -1,7 +1,7 @@
 ---
-const { target } = Astro.props;
+const { target, blank } = Astro.props;
 ---
-<a class="capsule-button" href={target} target="_blank">
+<a class="capsule-button" href={target} target={blank ? "_self" : "_blank"}>
     <slot />
 </a>
 
