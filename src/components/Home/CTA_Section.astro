@@ -1,6 +1,8 @@
 ---
-
-import CapsuleButton from "../CapsuleButton.astro";---
+import CapsuleButton from "../CapsuleButton.astro";
+import plain_xd from "../../assets/images/plain_xd.png"
+import radio from "../../assets/images/radio.png"
+---
 <section class="flex mt-16 h-80 bg-secondary-400 rounded-2xl justify-between">
     <div class="flex flex-col m-10 space-y-2">
         <p class="justify-start text-4xl font-extrabold">即刻加入，开启你的无线电探索之旅</p>
@@ -17,9 +19,13 @@ import CapsuleButton from "../CapsuleButton.astro";---
     </div>
 
     <div class="flex space-x-5">
-        <div class="w-96 h-72 bg-white rounded-tl-xl rounded-tr-xl self-end"></div>
+        <div class="w-96 h-72 bg-white rounded-tl-xl rounded-tr-xl self-end overflow-hidden">
+            <img src={plain_xd.src} alt="xd" />
+        </div>
 
-        <div class="w-96 h-72 bg-white rounded-bl-xl rounded-br-xl self-start mr-16"></div>
+        <div class="w-96 h-72 bg-white rounded-bl-xl rounded-br-xl self-start mr-16 overflow-hidden">
+            <img src={radio.src} alt="radio" />
+        </div>
     </div>
 
 </section>
