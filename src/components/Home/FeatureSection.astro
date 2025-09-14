@@ -1,0 +1,49 @@
+---
+import TitleSubtitle from "./TitleSubtitle.astro";
+const {title, subtitle} = {
+    title: "社团核心特色",
+    subtitle: "我们不仅是技术的探索者，更是红色通信精神的传承者。在这里，理论与实践深度结合，历史与未来在此共鸣。",
+}
+---
+<section class="flex flex-col pt-32 items-center">
+    <TitleSubtitle title={title} subtitle={subtitle} />
+
+    <div class="flex w-full h-[550px] mt-10 justify-between bg-secondary-300 rounded-4xl">
+        <div class="mt-7 ml-10">
+            <p class="text-5xl font-semibold ">传承红色通信基因</p>
+            <p class="text-base font-light w-[770px] mt-5">
+                作为西电最具历史底蕴的社团之一，“半部电台”不仅是一个名字，更是一面旗帜。我们深入挖掘红军第一部电台背后的故事，学习王诤将军“长征路上办学”的艰苦奋斗精神。通过举办历史讲座、复原古代通信设备、参与红色教育活动等方式，我们将“永不消逝的电波”精神融入每一次实践，让每一位社员都成为这段光辉历史的讲述者和传承者。
+            </p>
+        </div>
+
+        <div class="w-96 h-[521px] bg-white rounded-tl-2xl rounded-tr-2xl self-end mr-16">
+            <!--    图片 -->
+        </div>
+    </div>
+
+    <div class="flex w-full h-[550px] mt-9 space-x-9 justify-between">
+        <div class="flex flex-col w-full justify-between bg-secondary-300 rounded-4xl">
+            <div class="mt-7 ml-10">
+                <p class="text-5xl font-semibold ">探索前沿无线技术</p>
+                <p class="text-base font-light w-[600px] mt-5">
+                    从传统的短波（HF）通联到现代的软件无线电（SDR），从入门级的操作证书考取到最前沿的卫星通信、物联网（LoRa）组网，我们为社员提供了完整的成长路径。社团拥有丰富的实验设备和专业的技术指导，无论你是刚入门的小白还是技术大神，都能在这里找到属于你的探索方向，亲手触摸无线技术的脉搏。
+                </p>
+            </div>
+            <div class="w-[488px] h-full mt-8 bg-white rounded-tl-2xl rounded-tr-2xl justify-center justify-self-center self-center">
+                <!--    图片 -->
+            </div>
+        </div>
+
+        <div class="flex flex-col w-full justify-between bg-secondary-300 rounded-4xl">
+            <div class="mt-7 ml-10">
+                <p class="text-5xl font-semibold ">在实践与竞赛中成长</p>
+                <p class="text-base font-light w-[600px] mt-5">
+                    我们坚信，实践是检验真理的唯一标准。社团常年组织各类电子制作项目，从DIY天线到改装电台，再到嵌入式开发，鼓励成员将想法变为现实。同时，我们积极组织队伍参与全国大学生电子设计竞赛等顶级赛事，并屡获佳绩。在这里，你将与优秀的同伴并肩作战，在挑战中快速成长，收获宝贵的经验和荣誉。
+                </p>
+            </div>
+            <div class="w-[488px] h-full mt-8 bg-white rounded-tl-2xl rounded-tr-2xl justify-center justify-self-center self-center">
+                <!--    图片 -->
+            </div>
+        </div>
+    </div>
+</section>
