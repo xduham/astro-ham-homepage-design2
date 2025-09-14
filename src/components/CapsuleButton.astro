@@ -1,0 +1,14 @@
+---
+const { target } = Astro.props;
+---
+<a class="capsule-button" href={target}>
+    <slot />
+</a>
+
+<style>
+@reference "../styles/global.css";
+
+.capsule-button {
+    @apply inline-block bg-primary-500 text-white  font-semibold py-4 px-14 rounded-full hover:bg-primary-600 transition duration-100;
+}
+</style>
