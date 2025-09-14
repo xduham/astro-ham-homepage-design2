@@ -1,0 +1,46 @@
+---
+import TitleSubtitle from "./TitleSubtitle.astro";
+const {title, subtitle} = {
+    title: "加入我们的四大理由",
+    subtitle: "我们为每位对无线电技术充满热情的同学提供了一个独特的平台。在这里，你不仅能收获前沿的专业知识，更能找到一群志同道合的伙伴，传承一份有故事的精神。",
+}
+
+const advantages = [
+    {
+        icon: "icon-path-1",
+        title: "系统的成长路径",
+        description: "我们为你规划了从“小白”到“大神”的完整学习路线。从入门的操作证考试辅导，到HF/VHF基础通联，再到SDR、卫星通信等前沿领域，每一步都有学长学姐的悉心指导。",
+    },
+    {
+        icon: "icon-path-2",
+        title: "系统的成长路径",
+        description: "纸上谈兵终觉浅。在这里，你将有机会参与从天线DIY到电台改装等各类硬件项目，亲手将理论知识转化为实际作品，并在全国电子设计竞赛等顶级赛场上证明自己。",
+    },
+    {
+        icon: "icon-path-3",
+        title: "独特的精神传承",
+        description: "加入我们，意味着你将成为“半部电台”红色通信精神的传承者。你将深入了解西电的通信史，参与这段独特文化的弘扬，获得一份与众不同的社团经历。",
+    },
+    {
+        icon: "icon-path-4",
+        title: "开放的交流社区",
+        description: "你将结识一群对无线电技术极具热情的优秀同伴。社团拥有专属的活动室、丰富的实验设备和资料库，为你提供了一个自由交流、思想碰撞、共同探索的理想家园。",
+    },
+]
+
+---
+<section class="flex flex-col items-center pt-20">
+    <TitleSubtitle title={title} subtitle={subtitle} />
+    <div class="flex justify-between w-full mt-12">
+        {advantages.map((advantage) => (
+                <div class="flex flex-col space-y-3 mx-6">
+                    <div class="flex w-14 h-14 bg-secondary-300 rounded-full text-primary-500 justify-center items-center">
+                        {advantage.icon}
+                    </div>
+                    <p class="text-xl font-bold">{advantage.title}</p>
+                    <p class="text-sm font-light w-80">{advantage.description}</p>
+                </div>
+        ))}
+
+    </div>
+</section>
