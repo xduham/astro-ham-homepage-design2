@@ -1,21 +1,47 @@
 ---
 import ShuGuang from "../../assets/partners/xidian_shuguang.png"
 import CRAC from "../../assets/partners/CRAC.png"
+
+const partners = [
+    {
+        name: "西安无线电通信学会",
+        logo: CRAC,
+        url: "http://www.crac.org.cn/"
+    },
+    {
+        name: "西电曙光天文学会",
+        logo: ShuGuang,
+        url: "https://xidianastro.club/"
+    }
+]
 ---
 <section class="mt-28 flex justify-between items-center">
-    <div class="justify-start text-primary-500 text-3xl font-normal">
+    <div class="justify-start text-primary-500 text-lg md:text-3xl font-normal">
         权威指导与合作伙伴
     </div>
 
-    <div class="flex space-x-8 text-secondary-500 font-normal">
-        <div class="flex flex-col justify-center items-center">
-            <img alt="logo" class="w-24 h-24 rounded-full" src={CRAC.src} />
-            <p>西安无线电通信学会</p>
-        </div>
-
-        <div class="flex flex-col justify-center items-center">
-            <img alt="西电曙光天文学会 logo" class="w-24 h-24 rounded-full" src={ShuGuang.src} />
-            <p >西电曙光天文学会</p>
-        </div>
+    <div class="flex space-x-2 md:space-x-8 text-secondary-500 font-normal">
+        {partners.map((partner) => (
+            <div class="partner">
+                <img alt={partner.name + " logo"} class="partner-logo" src={partner.logo.src} />
+                <p class="partner-text">{partner.name}</p>
+            </div>
+        ))}
     </div>
 </section>
+
+<style>
+@reference "../../styles/global.css";
+
+.partner{
+    @apply flex flex-col justify-center items-center ;
+}
+
+.partner-text{
+    @apply text-[0.5rem] md:text-base text-center pt-1;
+}
+
+.partner-logo{
+    @apply w-12 h-12 md:w-24 md:h-24 rounded-full;
+}
+</style>
