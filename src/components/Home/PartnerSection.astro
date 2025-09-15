@@ -15,12 +15,12 @@ const partners = [
     }
 ]
 ---
-<section class="mt-28 flex justify-between items-center">
-    <div class="justify-start text-primary-500 text-lg md:text-3xl font-normal">
+<section class="mt-28 flex flex-col md:flex-row justify-center md:justify-between items-center">
+    <div class="justify-start text-primary-500 text-lg pb-3 md:pb-0 md:text-3xl font-normal">
         权威指导与合作伙伴
     </div>
 
-    <div class="flex space-x-2 md:space-x-8 text-secondary-500 font-normal">
+    <div class="flex space-x-4 md:space-x-8 text-secondary-500 font-normal">
         {partners.map((partner) => (
             <div class="partner">
                 <img alt={partner.name + " logo"} class="partner-logo" src={partner.logo.src} />
@@ -38,10 +38,10 @@ const partners = [
 }
 
 .partner-text{
-    @apply text-[0.5rem] md:text-base text-center pt-1;
+    @apply text-xs md:text-base text-center pt-1;
 }
 
 .partner-logo{
-    @apply w-12 h-12 md:w-24 md:h-24 rounded-full;
+    @apply w-16 h-16 md:w-24 md:h-24 rounded-full;
 }
 </style>
