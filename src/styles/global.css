@@ -25,3 +25,23 @@ body {
 }
 
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-primary-500: #E0E0E0;      /* 深色模式下的主文字颜色 (变亮) */
+        --color-primary-600: #BDBDBD;      /* 深色模式下的次要文字颜色 (变亮) */
+        --color-secondary-300: #212121;    /* 卡片等元素的背景色 (变深) */
+        --color-secondary-400: #333333;    /* 稍微亮一点的背景色 (变深) */
+        --color-secondary-500: #757575;    /* 辅助性文字颜色 (变亮) */
+        --color-secondary-600: #9E9E9E;    /* 更亮的辅助性文字颜色 (变亮) */
+
+        /* 别忘了更新 body 的背景色 */
+        background-color: #121212;
+
+        --color-accent-500: var(--color-teal-700);
+        --color-accent-600: var(--color-teal-800);
+    }
+
+    html, body {
+        background-color: #121212; /* 确保 body 背景色也被覆盖 */
+    }
+}
