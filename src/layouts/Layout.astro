@@ -1,29 +1,30 @@
 ---
+// src/layouts/Layout.astro
+
 const {title} = Astro.props;
 import Nav from "../components/Home/Nav.astro";
+import BackToTop from "../components/BackToTop.astro";
 import "../styles/global.css"
 ---
 
 <!doctype html>
 <html lang="zh-CN">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-        <title>{title}</title>
-	</head>
-    <body class="flex flex-col min-h-screen px-10 md:px-24 pt-4">
-        <Nav />
-		<slot />
-	</body>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+</head>
+<body class="flex flex-col min-h-screen">
+<Nav />
+<main class="px-10 md:px-24">
+    <slot />
+    <BackToTop />
+</main>
+</body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+    /* ... */
 </style>

@@ -11,7 +11,11 @@
     --color-accent-600: var(--color-teal-600);
 }
 
-html,
+html {
+    scroll-behavior: smooth;
+}
+
+
 
 body {
     margin: 0;
@@ -24,7 +28,12 @@ body {
     @apply text-primary-500
 }
 
-
+/* 对于希望减少动画的用户，禁用平滑滚动 */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
 @media (prefers-color-scheme: dark) {
     :root {
         --color-primary-500: #E0E0E0;      /* 深色模式下的主文字颜色 (变亮) */

@@ -1,0 +1,41 @@
+---
+// src/components/BackToTop.astro
+---
+<a
+        id="back-to-top"
+        href="#"
+        class="hidden fixed bottom-8 right-8 z-40 bg-secondary-500 text-white rounded-full p-3 shadow-lg hover:bg-secondary-600/90 transition-opacity duration-300"
+        aria-label="回到顶部"
+>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+        <path fill-rule="evenodd" d="M11.47 7.72a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06L12 9.31l-6.97 6.97a.75.75 0 01-1.06-1.06l7.5-7.5z" clip-rule="evenodd" />
+    </svg>
+</a>
+
+<script>
+const backToTopButton = document.getElementById('back-to-top');
+
+if (!backToTopButton) {
+    throw new Error('Back to Top button not found');
+}
+
+// 滚动监听器
+window.addEventListener('scroll', () => {
+    // 当页面向下滚动超过 400px 时显示按钮
+    if (window.scrollY > 400) {
+        backToTopButton.classList.remove('hidden');
+    } else {
+        backToTopButton.classList.add('hidden');
+    }
+});
+
+// 点击事件（可选，因为 href="#" 和 smooth scroll 已经生效）
+// 添加这个可以提供更好的控制，例如防止 URL 后面跟着一个 '#'
+backToTopButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+</script>
