@@ -4,9 +4,12 @@ import bg from "../../assets/images/clear_bg.png";
 ---
 <section class="section-hero">
     <!-- 左半区域 -->
-    <div class="max-w-3xl">
-        <p class="text-6xl font-extrabold mb-5 -ml-8">「半部电台」业余无线电社</p>
-        <div class="flex justify-space-between space-x-3 mb-5">
+    <div class="flex flex-col justify-center md:max-w-3xl">
+        <p class="hidden md:block text-3xl md:text-6xl font-extrabold mb-5 -ml-8">「半部电台」业余无线电社</p>
+
+        <p class="block md:hidden text-5xl md:text-6xl font-extrabold mb-5 -ml-4">「半部电台」</p>
+        <p class="block md:hidden text-3xl md:text-6xl font-extrabold mb-5">业余无线电社</p>
+        <div class="flex justify-space-between space-x-1 md:space-x-3 mb-5">
             <div class="tags">
                 传承红色通信基因
             </div>
@@ -17,7 +20,7 @@ import bg from "../../assets/images/clear_bg.png";
                 凝聚西电创新力量
             </div>
         </div>
-        <p class="text-secondary-500 font-normal text-lg mb-16">得名于红军第一部电台，我们是“半部电台”精神的当代传人。社团致力于探索无线技术前沿，传承红色通信基因，在实践与创新中，让“永不消逝的电波”精神在新一代西电人手中发扬光大。</p>
+        <p class="text-secondary-500 font-light md:font-normal text-lg mb-16">得名于红军第一部电台，我们是“半部电台”精神的当代传人。社团致力于探索无线技术前沿，传承红色通信基因，在实践与创新中，让“永不消逝的电波”精神在新一代西电人手中发扬光大。</p>
         <div class="flex space-x-7 mb-6">
             <CapsuleButton target="https://qm.qq.com/q/xYROiyuXg4">
                 <div class="flex space-x-2">
@@ -50,7 +53,7 @@ import bg from "../../assets/images/clear_bg.png";
         </div>
     </div>
 
-    <div>
+    <div class="hidden 2xl:block">
         <div class="h-[650px] aspect-auto rounded-3xl">
             <img class="w-full h-full object-cover rounded-3xl" src={bg.src} alt="背景图" />
         </div>
@@ -65,6 +68,6 @@ import bg from "../../assets/images/clear_bg.png";
 }
 
 .tags {
-    @apply flex w-40 h-9 bg-secondary-300 text-secondary-600 items-center justify-center rounded-lg
+    @apply flex w-26 h-8 text-[0.7rem] md:text-base md:w-40 md:h-9 bg-secondary-300 text-secondary-600 items-center justify-center rounded-lg
 }
 </style>
