@@ -3,10 +3,10 @@ import CapsuleButton from "../CapsuleButton.astro";
 import plain_xd from "../../assets/images/plain_xd.png"
 import radio from "../../assets/images/radio.png"
 ---
-<section class="flex mt-16 h-80 bg-secondary-400 rounded-2xl justify-between">
+<section class="flex mt-16 2xl:h-80 bg-secondary-400 rounded-2xl justify-between">
     <div class="flex flex-col m-10 space-y-2">
         <p class="justify-start text-4xl font-extrabold">即刻加入，开启你的无线电探索之旅</p>
-        <p class="w-[740px] justify-start text-base font-light">无论你是技术爱好者、历史探索者，还是仅仅对这个神秘领域充满好奇，“半部电台”都有你的一席之地。在这里，你将与最优秀的同伴一起，探索无线技术的无限可能，并成为一段光荣历史的传承者。</p>
+        <p class="2xl:w-[740px] justify-start text-base font-light">无论你是技术爱好者、历史探索者，还是仅仅对这个神秘领域充满好奇，“半部电台”都有你的一席之地。在这里，你将与最优秀的同伴一起，探索无线技术的无限可能，并成为一段光荣历史的传承者。</p>
 
         <div class="flex space-x-4 mt-10">
             <CapsuleButton target="https://qm.qq.com/q/xYROiyuXg4">
@@ -18,12 +18,12 @@ import radio from "../../assets/images/radio.png"
         </div>
     </div>
 
-    <div class="flex space-x-5 h-80">
+    <div class="hidden 2xl:flex space-x-5 h-80">
         <div class="w-96 h-72 bg-white rounded-tl-xl rounded-tr-xl self-end overflow-hidden">
             <img src={plain_xd.src} alt="xd" />
         </div>
 
-        <div class="w-96 h-72 bg-white rounded-bl-xl rounded-br-xl self-start mr-16 overflow-hidden">
+        <div class="hidden w-96 h-72 bg-white rounded-bl-xl rounded-br-xl self-start mr-16 overflow-hidden">
             <img src={radio.src} alt="radio" />
         </div>
     </div>
