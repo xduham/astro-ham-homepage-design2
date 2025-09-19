@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "daisyui";
 
 @theme {
     --color-primary-500: #3A3737;
@@ -9,6 +10,11 @@
     --color-secondary-600: #707070;
     --color-accent-500: var(--color-teal-500);
     --color-accent-600: var(--color-teal-600);
+}
+
+
+.capsule-button {
+    @apply flex justify-between bg-accent-500 text-white font-semibold py-4 px-5 md:px-6 rounded-full hover:bg-accent-600 transition duration-100 hover:cursor-pointer;
 }
 
 html {
