@@ -1,30 +1,47 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import HeroSection from "../components/Home/HeroSection.astro";
-import PartnerSection from "../components/Home/PartnerSection.astro";
-import FeatureSection from "../components/Home/FeatureSection.astro";
-import WhyChooseUsSection from "../components/Home/WhyChooseUsSection.astro";
-import FAQ_Section from "../components/Home/FAQ_Section.astro";
-import CTA_Section from "../components/Home/CTA_Section.astro";
-import Footer from "../components/Footer.astro";
 
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 ---
 
-<Layout title="「半部电台」业余无线电社">
+<Layout title="个人经验分享站">
+    <!-- Hero Section -->
+    <section class="flex flex-col items-center justify-center text-center mt-20 mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            个人经验分享站
+        </h1>
+        <p class="text-lg text-secondary-600 max-w-2xl leading-relaxed">
+            记录学习、探索与成长的点点滴滴，分享技术与生活中的实用经验。
+        </p>
+    </section>
 
+    <!-- Divider -->
+    <div class="divider max-w-md mx-auto mb-12"></div>
 
-    <HeroSection />
+    <!-- Articles Section -->
+    <section class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-bold mb-8 text-center">最新文章</h2>
 
-    <PartnerSection />
+        <ul class="flex flex-col space-y-6">
+            {allPosts.map((post: any) => (
+                <li>
+                    <a
+                        href={post.url}
+                        class="block p-6 bg-secondary-300 dark:bg-secondary-300 rounded-lg hover:shadow-md transition-shadow duration-200"
+                    >
+                        <h3 class="text-xl font-semibold mb-2 hover:text-accent-500 transition-colors">
+                            {post.frontmatter.title}
+                        </h3>
+                        <p class="text-sm text-secondary-600 mb-3">
+                            {post.frontmatter.pubDate?.slice(0, 10)}
+                        </p>
+                        <p class="text-secondary-600 leading-relaxed">
+                            {post.frontmatter.description}
+                        </p>
+                    </a>
+                </li>
+            ))}
+        </ul>
+    </section>
 
-    <FeatureSection />
-
-    <WhyChooseUsSection />
-
-    <FAQ_Section />
-
-    <CTA_Section />
-
-    <Footer />
 </Layout>
-
